@@ -1,4 +1,4 @@
-var canvas = document.getElementById('canvas'); /*define canvas*/
+var canvas = document.getElementById('player'); /*define canvas*/
 var ctx = canvas.getContext('2d'); /*make 2d canvas*/
 var fps = 25; /*frames per seconds*/
 var ucode; /* Var that will hold users code */
