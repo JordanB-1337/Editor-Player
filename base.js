@@ -54,7 +54,12 @@ function Sprite(name, x, y, direction) {
         return this.direction /* return new direction */
     };
 }
-
+function onload() {
+    
+}
+function draw() {
+    
+}
 function makeSprite(name, x, y, direction) {
         this[name] = new Sprite(name, x, y, direction); /* Add spirtes*/
     }
