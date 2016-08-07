@@ -60,6 +60,9 @@ function onload() {
 function draw() {
     
 }
+function clear() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
 function makeSprite(name, x, y, direction) {
         this[name] = new Sprite(name, x, y, direction); /* Add spirtes*/
     }
@@ -69,7 +72,7 @@ function runCode() {
 onload(); /*run onload(); which will be a user command.*/
 code = setInterval(function() { /*Uses var code so we can have a kill button */
     try {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        clear();
         eval(draw()); /*users code*/
     } catch (err) {
         console.log(err);
