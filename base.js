@@ -63,7 +63,7 @@ function runCode() {
 onload(); /*run onload(); which will be a user command.*/
 code = setInterval(function() { /*Uses var code so we can have a kill button */
     try {
-        eval(ucode); /*users code*/
+        eval(draw()); /*users code*/
     } catch (err) {
         console.log(err);
         errorcode = err; /* Send error to client */
