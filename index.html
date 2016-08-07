@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>LilCoders Editor</title>
@@ -27,12 +25,23 @@
 </head>
 
 <body>
+    <noscript>
+        Oh Noes! Your browser does not support LilCoders. :(
+    </noscript>
     <div class="container">
         <div class="row">
-            <div class="six columns"><pre id="editor"></pre>
+            <div class="six columns">
+                <pre id="editor">
+                    function onload() {
+    
+                    }
+                    function draw() {
+                    
+                    }
+                </pre>
             </div>
             <div class="six columns">
-                <canvas id="player" style="border:1px solid #000000;"></canvas>
+                <canvas id="player" style="border:1px solid #000000;">Oh Noes! Your browser does not support LilCoders. :(</canvas>
                 <br>
                 <img src="img/Play.png" alt="Play" width=48 height=48 id="Play" onclick="runCode()" />
                 <img src="img/Stop.png" alt="Stop" width=48 height=48 id="Stop"  onclick="clearInterval(code);" />
