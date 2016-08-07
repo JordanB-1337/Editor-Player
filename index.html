@@ -1,56 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>LilCoders Editor</title>
-  <style type="text/css" media="screen">
-    body {
-        overflow: hidden;
-        height: 100%;
-        width: 100%;
-    }
-    #editor {
-       height: 350px;
-       width:350px;
-       position: relative;
-   }
-   #player {
-       height: 300px;
-       width:300px;
-       position: relative;
-   }
-  </style>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>LilCoders Editor</title>
+    <style type="text/css" media="screen">
+        body {
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+        }
+        #editor {
+            height: 350px;
+            width: 350px;
+            position: relative;
+        }
+        #player {
+            height: 300px;
+            width: 300px;
+            position: relative;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
 </head>
+
 <body>
-  <pre id="editor">
-  </pre>
+    <div class="container">
+        <div class="row">
+            <div class="six column"><pre id="editor"></pre>
+            </div>
+            <div class="six columns">
+                <canvas id="player" style="border:1px solid #000000;"></canvas>
 
-  <canvas id="player" style="border:1px solid #000000;"></canvas>
+                <img src="img/Play.png" alt="Play" width=48 height=48 id="Play" />
+                <img src="img/Stop.png" alt="Stop" width=48 height=48 id="Stop" />
+                <img src="img/Save.png" alt="Save" width=48 height=48 id="Save" />
+                <img src="img/Download.png" alt="Download" width=48 height=48 id="Download" />
+            </div>
+        </div>
 
-  <img src="img/Play.png" alt="Play" width=48 height=48 id="Play" />
-  <img src="img/Stop.png" alt="Stop" width=48 height=48 id="Stop" />
-  <img src="img/Save.png" alt="Save" width=48 height=48 id="Save" />
-  <img src="img/Download.png" alt="Download" width=48 height=48 id="Download" />
+    </div>
+    <script src="./src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./src-noconflict/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
 
-
-<script src="./src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-<script src="./src-noconflict/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
-
-<script>
-    var langTools = ace.require("ace/ext/language_tools");
-    var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/clouds");
-    editor.session.setMode("ace/mode/javascript");
-    editor.setShowPrintMargin(false);
-    editor.setOptions({
-        enableBasicAutocompletion: true,
-        enableSnippets: true,
-        enableLiveAutocompletion: false
-    });
-</script>
+    <script>
+        var langTools = ace.require("ace/ext/language_tools");
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/clouds");
+        editor.session.setMode("ace/mode/javascript");
+        editor.setShowPrintMargin(false);
+        editor.setOptions({
+            enableBasicAutocompletion: true,
+            enableSnippets: true,
+            enableLiveAutocompletion: false
+        });
+    </script>
 
 </body>
+
 </html>
