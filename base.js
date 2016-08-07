@@ -77,6 +77,11 @@ code = setInterval(function() { /*Uses var code so we can have a kill button */
     } catch (err) {
         console.log(err);
         errorcode = err; /* Send error to client */
+        clear();
+        ctx.font = "30px Comic Sans MS";
+        ctx.fillStyle = "red";
+        ctx.textAlign = "center";
+        ctx.fillText(err,canvas.width/2, canvas.height/2);
         clearInterval(code); /* Stop code from running */
     }
 }, 1000 / fps); /*set framerate*/
