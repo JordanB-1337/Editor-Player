@@ -65,7 +65,7 @@ Code to load users codes.
 */
 function runCode() {
 onload(); /*run onload(); which will be a user command.*/
-var code = setInterval(function() { /*Uses var code so we can have a kill button */
+code = setInterval(function() { /*Uses var code so we can have a kill button */
     try {
         eval(ucode); /*users code*/
     } catch (err) {
