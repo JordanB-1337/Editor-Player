@@ -2,6 +2,7 @@ var canvas = document.getElementById('player'); /*define canvas*/
 var ctx = canvas.getContext('2d'); /*make 2d canvas*/
 var fps = 25; /*frames per seconds*/
 var ucode; /* Var that will hold users code */
+var code;
 var errorcode; /* Errorcode reported to the user */
 var sprites = {}; /* An Object for all the sprites. Just trust me on the whole object thing please*/
 function Sprite(name, x, y, direction) {
@@ -62,6 +63,7 @@ function makeSprite(name, x, y, direction) {
 Code to load users codes.
 
 */
+function runCode() {
 onload(); /*run onload(); which will be a user command.*/
 var code = setInterval(function() { /*Uses var code so we can have a kill button */
     try {
@@ -72,3 +74,4 @@ var code = setInterval(function() { /*Uses var code so we can have a kill button
         clearInterval(code); /* Stop code from running */
     }
 }, 1000 / fps); /*set framerate*/
+}
