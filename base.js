@@ -58,12 +58,8 @@ function Sprite(name, x, y, direction) {
 function makeSprite(name, x, y, direction) {
         this[name] = new Sprite(name, x, y, direction); /* Add spirtes*/
     }
-    /*
-
-Code to load users codes.
-
-*/
 function runCode() {
+    eval(editor.getValue())
 onload(); /*run onload(); which will be a user command.*/
 code = setInterval(function() { /*Uses var code so we can have a kill button */
     try {
