@@ -86,3 +86,9 @@ code = setInterval(function() { /*Uses var code so we can have a kill button */
     }
 }, 1000 / fps); /*set framerate*/
 }
+
+/*
+Disable commands here
+*/
+
+document.write = {}
