@@ -95,3 +95,5 @@ Just do function = {};
 document.write = {};
 document.cookie = {};
 alert = {};
+confirm = {};
+prompt = {};
