@@ -88,7 +88,10 @@ code = setInterval(function() { /*Uses var code so we can have a kill button */
 }
 
 /*
-Disable commands here
+Disable commands here!
+Just do function = {};
 */
 
-document.write = {}
+document.write = {};
+document.cookie = {};
+
